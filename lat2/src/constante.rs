@@ -1,37 +1,106 @@
+// cargo run --bin constante
+
 // use std::thread::sleep;
 // use std::time::Duration;
 
 fn main() {
-    let number_a: i8 = 12;
-    let number_b: i8 = 14;
+    refresh_brain("============== REFRESH BRAIN ==============");
 
-    let res_one = number_a == number_b;
-    println!("res_one {}", res_one);
-
-    continuex();
+    // arrar_ex();
+    // continuex();
     // breakx();
     // loopx();
     // timerx();
 }
 
-fn continuex() {
-    let mut i = 0;
-    let max = 15;
+fn refresh_brain(text: &str) {
+    println!("{}", text);
 
-    'nama_label: loop {
-        i += 1;
-
-        if i % 2 == 1 {
-            continue;
-        }
-
-        println!("i : {}", i);
-
-        if i >= max {
-            break 'nama_label;
-        }
+    struct Pengguna {
+        id: i32,
+        nama: String,
     }
+
+    let daftar_pengguna: Vec<Pengguna> = vec![
+        Pengguna {
+            id: 1,
+            nama: String::from("Kiken"),
+        },
+        Pengguna {
+            id: 2,
+            nama: String::from("Rizwan"),
+        },
+    ];
+
+    for user in daftar_pengguna {
+        println!("ID: {}, Nama: {}", user.id, user.nama);
+    }
+
+    // penjelasannya ada di
+    // https://gemini.google.com/app/289373e9a1945207?is_sa=1&is_sa=1&android-min-version=301356232&ios-min-version=322.0&campaign_id=bkws&utm_source=sem&utm_source=google&utm_medium=paid-media&utm_medium=cpc&utm_campaign=bkws&utm_campaign=2024idID_gemfeb&pt=9008&mt=8&ct=p-growth-sem-bkws&gclsrc=aw.ds&gad_source=1&gad_campaignid=20437330464&gbraid=0AAAAApk5Bhniwrx629KzPCu_JNnwKrDYZ&gclid=Cj0KCQiAuvTJBhCwARIsAL6DemhD-K8GNtaNg3gSff2w5BO4_bFqqa3m9RElxsDYAquEViFCX_2gfPoaAtx0EALw_wcB
 }
+
+// fn arrar_multiple_ex(text: &str) {
+//     println!("{}", text);
+//     let a: [[&str; 4]; 2] = [["a", "b", "c", "d"], ["e", "f", "g", "h"]];
+
+//     let mut i = 0;
+//     loop {
+//         if i >= a.len() {
+//             break;
+//         }
+
+//         let mut j = 0;
+//         loop {
+//             println!("Array ke-[{}][{}] = {}", i, j, a[i][j]);
+//             j += 1;
+
+//             if j >= a[i].len() {
+//                 break;
+//             }
+//         }
+
+//         i += 1;
+//     }
+// }
+
+// fn arrar_ex() {
+//     let letters = ["a", "b", "c", "d"];
+//     let letter = letters[3];
+
+//     println!("data letter pertama adalah : {}", letter);
+// }
+
+// fn continuex() {
+//     // let mut i = 0;
+//     // let max = 15;
+
+//     // 'nama_label: loop {
+//     //     i += 1;
+
+//     //     if i % 2 == 1 {
+//     //         continue;
+//     //     }
+
+//     //     println!("i : {}", i);
+
+//     //     if i >= max {
+//     //         break 'nama_label;
+//     //     }
+//     // }
+
+//     let mut i: i16 = 0;
+//     'nama_label: loop {
+//         i += 1;
+//         sleep(Duration::from_secs(1));
+//         println!("Ini adalah angka ke {}", i);
+
+//         if i == 5 {
+//             println!("Semua data telah selesai di print");
+//             break 'nama_label;
+//         }
+//     }
+// }
 
 //  fn breakx() {
 //     let mut i: i8 = 0;
