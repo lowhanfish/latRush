@@ -5,7 +5,7 @@
 
 fn main() {
     refresh_brain("============== REFRESH BRAIN ==============");
-
+    get_object();
     // arrar_ex();
     // continuex();
     // breakx();
@@ -16,28 +16,42 @@ fn main() {
 fn refresh_brain(text: &str) {
     println!("{}", text);
 
+    // https://gemini.google.com/app/289373e9a1945207?is_sa=1&is_sa=1&android-min-version=301356232&ios-min-version=322.0&campaign_id=bkws&utm_source=sem&utm_source=google&utm_medium=paid-media&utm_medium=cpc&utm_campaign=bkws&utm_campaign=2024idID_gemfeb&pt=9008&mt=8&ct=p-growth-sem-bkws&gclsrc=aw.ds&gad_source=1&gad_campaignid=20437330464&gbraid=0AAAAApk5Bhniwrx629KzPCu_JNnwKrDYZ&gclid=Cj0KCQiAuvTJBhCwARIsAL6DemhD-K8GNtaNg3gSff2w5BO4_bFqqa3m9RElxsDYAquEViFCX_2gfPoaAtx0EALw_wcB
+}
+
+fn get_object() {
     struct Pengguna {
-        id: i32,
+        id: i8,
         nama: String,
+        usia: i32,
     }
 
-    let daftar_pengguna: Vec<Pengguna> = vec![
+    let user_data: Vec<Pengguna> = vec![
         Pengguna {
             id: 1,
             nama: String::from("Kiken"),
+            usia: 39,
         },
         Pengguna {
             id: 2,
             nama: String::from("Rizwan"),
+            usia: 29,
+        },
+        Pengguna {
+            id: 3,
+            nama: String::from("dayat"),
+            usia: 29,
         },
     ];
 
-    for user in daftar_pengguna {
-        println!("ID: {}, Nama: {}", user.id, user.nama);
+    for data in user_data.iter() {
+        println!(
+            "id : {}, Nama : {}, Usia : {}",
+            data.id, data.nama, data.usia
+        );
     }
 
-    // penjelasannya ada di
-    // https://gemini.google.com/app/289373e9a1945207?is_sa=1&is_sa=1&android-min-version=301356232&ios-min-version=322.0&campaign_id=bkws&utm_source=sem&utm_source=google&utm_medium=paid-media&utm_medium=cpc&utm_campaign=bkws&utm_campaign=2024idID_gemfeb&pt=9008&mt=8&ct=p-growth-sem-bkws&gclsrc=aw.ds&gad_source=1&gad_campaignid=20437330464&gbraid=0AAAAApk5Bhniwrx629KzPCu_JNnwKrDYZ&gclid=Cj0KCQiAuvTJBhCwARIsAL6DemhD-K8GNtaNg3gSff2w5BO4_bFqqa3m9RElxsDYAquEViFCX_2gfPoaAtx0EALw_wcB
+    println!("Panjang user_data = {}", user_data.len());
 }
 
 // fn arrar_multiple_ex(text: &str) {
@@ -67,7 +81,6 @@ fn refresh_brain(text: &str) {
 // fn arrar_ex() {
 //     let letters = ["a", "b", "c", "d"];
 //     let letter = letters[3];
-
 //     println!("data letter pertama adalah : {}", letter);
 // }
 
