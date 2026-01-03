@@ -2,9 +2,18 @@
 name = "lat2"
 version = "0.1.0"
 edition = "2024"
+default-run = "lat2"
 
 [dependencies]
 
 [[bin]]
+name = "lat4"
+path = "src/lat4.rs"
+
+[[bin]]
 name = "constante"
 path = "src/constante.rs"
+
+[[bin]]
+name = "lat2"
+path = "src/main.rs"

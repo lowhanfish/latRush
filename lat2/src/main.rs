@@ -5,41 +5,43 @@
 use std::i8;
 
 fn main() {
-    let (data1, data2, data3): (i8, i8, &str) = (12, 21, "Riswan");
-    println!("{},{},{}", data1, data2, data3);
-    let mince = i8::MIN;
-    let maxce = i8::MAX;
-    println!("Nilai Max = {} dan Nilai MIn = {}", mince, maxce);
+    // let (data1, data2, data3): (i8, i8, &str) = (12, 21, "Riswan");
+    // println!("{},{},{}", data1, data2, data3);
+    // let mince = i8::MIN;
+    // let maxce = i8::MAX;
+    // println!("Nilai Max = {} dan Nilai MIn = {}", mince, maxce);
 
-    let des: f32 = 3.1231312321;
-    println!("Nilai des {:.2}", des);
+    // let des: f32 = 3.1231312321;
+    // println!("Nilai des {:.2}", des);
 
-    let bolex: bool = true;
-    println!("data boolean : {}", bolex);
+    // let bolex: bool = true;
+    // println!("data boolean : {}", bolex);
 
-    // escape (Outputnya bersambung)
-    let escap: &str = " hello \
-        \"ini\" \
-        escape \
-    ya";
-    println!("{}", escap);
+    // // escape (Outputnya bersambung)
+    // let escap: &str = " hello \
+    //     \"ini\" \
+    //     escape \
+    // ya";
+    // println!("{}", escap);
 
-    // (OUTPUNYA newline)
-    let escap1 = "
-        Baris 1
-        Baris 2
-        Baris 3
-    ";
-    println!("{}", escap1);
+    // // (OUTPUNYA newline)
+    // let escap1 = "
+    //     Baris 1
+    //     Baris 2
+    //     Baris 3
+    // ";
+    // println!("{}", escap1);
 
-    let ecap3: &str = "
-    [
-        {
-        \"nama\" : \"Koko\"
-        }
-    ]
-    ";
-    println!("{}", ecap3);
+    // let ecap3: &str = "
+    // [
+    //     {
+    //     \"nama\" : \"Koko\"
+    //     }
+    // ]
+    // ";
+    // println!("{}", ecap3);
+
+    hapus(13);
 }
 
 // fn main() {
@@ -60,3 +62,7 @@ fn main() {
 //         nama
 //     );
 // }
+
+fn hapus(data: i16) {
+    println!("jumlah perkalian = {}", data * 4);
+}
